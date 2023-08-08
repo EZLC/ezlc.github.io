@@ -1,0 +1,1 @@
+var posts=["2017/05/26/Java常用类的概述和使用/","2023/08/08/hello-world/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
