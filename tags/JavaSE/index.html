@@ -47,7 +47,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-08-16 00:35:56',
+  postUpdate: '2023-08-16 13:36:46',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -715,7 +715,42 @@ anzhiyu.topCategoriesBarScroll();
 anzhiyu.switchRightClickMenuHotReview();
 anzhiyu.getCustomPlayList();
 anzhiyu.addEventListenerConsoleMusicList(false);
-setTimeout(() => {if (typeof addFriendLinksInFooter === "function") {addFriendLinksInFooter();}}, 200)</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+setTimeout(() => {if (typeof addFriendLinksInFooter === "function") {addFriendLinksInFooter();}}, 200)</script><script>const loadScript = (url, charset = "UTF-8", crossorigin) => {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = url;
+    script.async = true;
+    if (charset) {
+      script.setAttribute("charset", charset);
+    }
+    if (crossorigin) {
+      script.setAttribute("crossorigin", crossorigin);
+    }
+    script.onerror = reject;
+    script.onload = script.onreadystatechange = function() {
+      const loadState = this.readyState;
+      if (loadState && loadState !== 'loaded' && loadState !== 'complete') return;
+      script.onload = script.onreadystatechange = null;
+      resolve();
+    };
+    document.head.appendChild(script);
+  });
+};
+
+const scriptUrls = [
+  { url: 'https://sdk.51.la/js-sdk-pro.min.js', charset: 'UTF-8', id: 'LA_COLLECT' },
+  { url: 'https://sdk.51.la/perf/js-sdk-perf.min.js', crossorigin: 'anonymous' }
+];
+
+Promise.all(scriptUrls.map(({ url, charset, crossorigin }) => loadScript(url, charset, crossorigin)))
+  .then(() => {
+    LA.init({ id: "3FcCxtZzWykSGu4k", ck: "3FcCxtZzWykSGu4k" });
+    new LingQue.Monitor().init({ id: "3FcCxtZzWykSGu4k", sendSuspicious: true });
+  })
+  .catch(error => {
+    console.error('本地无法加载51a统计，线上即可加载:', error);
+  });
+</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 
 var pjax = new Pjax({
   elements: 'a:not([target="_blank"])',
