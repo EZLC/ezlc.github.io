@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liucha.ng/2021/12/10/Log4j%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</loc>
+    
+    <lastmod>2023-08-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://liucha.ng/2017/05/29/%E9%9B%86%E5%90%88%E7%B1%BB%E5%BA%93/</loc>
     
-    <lastmod>2023-08-21</lastmod>
+    <lastmod>2023-08-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -94,7 +103,7 @@
 
   <url>
     <loc>https://liucha.ng/</loc>
-    <lastmod>2023-08-21</lastmod>
+    <lastmod>2023-08-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -102,7 +111,21 @@
   
   <url>
     <loc>https://liucha.ng/tags/JavaSE/</loc>
-    <lastmod>2023-08-21</lastmod>
+    <lastmod>2023-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://liucha.ng/tags/JavaEE/</loc>
+    <lastmod>2023-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://liucha.ng/tags/%E5%AE%89%E5%85%A8/</loc>
+    <lastmod>2023-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -111,7 +134,7 @@
   
   <url>
     <loc>https://liucha.ng/categories/%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2023-08-21</lastmod>
+    <lastmod>2023-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
