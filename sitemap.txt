@@ -12,12 +12,12 @@ https://liucha.ng/essay/index.html
 https://liucha.ng/categories/index.html
 https://liucha.ng/tags/index.html
 https://liucha.ng/
-https://liucha.ng/tags/JavaSE/
-https://liucha.ng/tags/JavaEE/
-https://liucha.ng/tags/%E5%AE%89%E5%85%A8/
-https://liucha.ng/tags/%E9%9D%A2%E8%AF%95/
-https://liucha.ng/tags/JVM/
 https://liucha.ng/tags/%E8%BF%90%E7%BB%B4/
+https://liucha.ng/tags/%E9%9D%A2%E8%AF%95/
 https://liucha.ng/tags/%E8%B0%83%E4%BC%98/
 https://liucha.ng/tags/Linux/
+https://liucha.ng/tags/JavaSE/
+https://liucha.ng/tags/JVM/
+https://liucha.ng/tags/JavaEE/
+https://liucha.ng/tags/%E5%AE%89%E5%85%A8/
 https://liucha.ng/categories/%E5%BC%80%E5%8F%91/
