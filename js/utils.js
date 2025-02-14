@@ -428,20 +428,31 @@ const anzhiyu = {
         localStorage.removeItem("commentBarrageSwitch");
       }
     }
-    rm.hideRightMenu();
+    rm && rm.hideRightMenu();
   },
   initPaginationObserver: () => {
-    var e = document.getElementById("post-comment"),
-      t = document.getElementById("pagination");
-    e &&
-      t &&
-      new IntersectionObserver(function (e) {
-        e.forEach(function (e) {
-          e.isIntersecting
-            ? (t.classList.add("show-window"), (document.querySelector(".comment-barrage").style.bottom = "-200px"))
-            : (t.classList.remove("show-window"), (document.querySelector(".comment-barrage").style.bottom = "0px"));
+    const commentElement = document.getElementById("post-comment");
+    const paginationElement = document.getElementById("pagination");
+
+    if (commentElement && paginationElement) {
+      new IntersectionObserver(entries => {
+        const commentBarrage = document.querySelector(".comment-barrage");
+
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            paginationElement.classList.add("show-window");
+            if (commentBarrage) {
+              commentBarrage.style.bottom = "-200px";
+            }
+          } else {
+            paginationElement.classList.remove("show-window");
+            if (commentBarrage) {
+              commentBarrage.style.bottom = "0px";
+            }
+          }
         });
-      }).observe(e);
+      }).observe(commentElement);
+    }
   },
   // 初始化即刻
   initIndexEssay: function () {
@@ -655,7 +666,7 @@ const anzhiyu = {
       navMusicEl.classList.add("stretch");
     }
     if (changePaly) document.querySelector("#nav-music meting-js").aplayer.toggle();
-    rm.hideRightMenu();
+    rm && rm.hideRightMenu();
   },
   // 音乐伸缩
   musicTelescopic: function () {
@@ -669,18 +680,18 @@ const anzhiyu = {
   //音乐上一曲
   musicSkipBack: function () {
     navMusicEl.querySelector("meting-js").aplayer.skipBack();
-    rm.hideRightMenu();
+    rm && rm.hideRightMenu();
   },
 
   //音乐下一曲
   musicSkipForward: function () {
     navMusicEl.querySelector("meting-js").aplayer.skipForward();
-    rm.hideRightMenu();
+    rm && rm.hideRightMenu();
   },
 
   //获取音乐中的名称
   musicGetName: function () {
-    var x = document.querySelector(".aplayer-title");
+    var x = document.querySelectorAll(".aplayer-title");
     var arr = [];
     for (var i = x.length - 1; i >= 0; i--) {
       arr[i] = x[i].innerText;
@@ -909,6 +920,11 @@ const anzhiyu = {
     anMusicSwitchingBtn.addEventListener("click", () => {
       anzhiyu.changeMusicList();
     });
+
+    // 默认加载的歌单
+    if (GLOBAL_CONFIG.music_page_default === "custom") {
+      anzhiyu.changeMusicList();
+    }
 
     // 监听键盘事件
     //空格控制音乐
@@ -1349,6 +1365,7 @@ const anzhiyuPopupManager = {
 
   popupShow(title, tip, url, duration) {
     const popupWindow = document.getElementById("popup-window");
+    if (!popupWindow) return;
     const windowTitle = popupWindow.querySelector(".popup-window-title");
     const windowContent = popupWindow.querySelector(".popup-window-content");
     const cookiesTip = windowContent.querySelector(".popup-tip");
