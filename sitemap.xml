@@ -2,18 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wojue.cn/2017/06/12/JavaWeb%E4%B8%AD%E7%9A%84Cookie%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://wojue.cn/cookies/index.html</loc>
     
-    <lastmod>2023-11-16</lastmod>
+    <lastmod>2025-02-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://wojue.cn/cookies/index.html</loc>
+    <loc>https://wojue.cn/privacy/index.html</loc>
     
-    <lastmod>2023-08-26</lastmod>
+    <lastmod>2025-02-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wojue.cn/2017/06/12/JavaWeb%E4%B8%AD%E7%9A%84Cookie%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2023-11-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -48,15 +57,6 @@
   
   <url>
     <loc>https://wojue.cn/copyright/index.html</loc>
-    
-    <lastmod>2023-08-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wojue.cn/privacy/index.html</loc>
     
     <lastmod>2023-08-25</lastmod>
     
